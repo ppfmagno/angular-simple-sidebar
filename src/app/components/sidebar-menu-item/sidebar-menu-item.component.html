@@ -1,0 +1,13 @@
+<ng-container *ngIf="menuItem.route; else noRoute">
+  <a href="{{ menuItem.route }}">{{ menuItem.name }}</a>
+</ng-container>
+
+<ng-template #noRoute>
+  <span>
+    {{ menuItem.name }}
+  </span>
+</ng-template>
+
+<ng-container *ngIf="menuItem.childrenMenus">
+  <ppm-sidebar-menu [menusFromParent]="menuItem.childrenMenus"></ppm-sidebar-menu>
+</ng-container>
