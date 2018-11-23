@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { TogglerService } from '../../service/toggler.service';
+import { TogglerService } from '../../services/toggler.service';
 
 @Component({
   selector: 'ppm-sidebar-toggler',
@@ -16,7 +16,6 @@ export class SidebarTogglerComponent implements OnInit {
   @HostListener('click')
   toggle() {
     this.togglerService.toggle();
-    console.log(this.togglerService.isOpen);
   }
 
 }

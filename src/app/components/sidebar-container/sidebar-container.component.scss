@@ -1,4 +1,5 @@
-.sidebar-container {
+:host {
+    flex: 1 1 auto;
     display: flex;
     position: relative;
     width: 100%;

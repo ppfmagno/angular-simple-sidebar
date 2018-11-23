@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ppm-sidebar-container',
@@ -8,8 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SidebarContainerComponent implements OnInit {
 
   constructor() { }
-
-  @Input() height: string;
 
   ngOnInit() {
   }
