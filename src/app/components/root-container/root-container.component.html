@@ -1,3 +1,5 @@
 <ng-content select="[ppmRootHeader]"></ng-content>
-<ppm-sidebar-container></ppm-sidebar-container>
+<ppm-sidebar-container>
+    <ng-content select="[ppmRootMain]" ppmRootMain></ng-content>
+</ppm-sidebar-container>
 <ng-content select="[ppmRootFooter]"></ng-content>

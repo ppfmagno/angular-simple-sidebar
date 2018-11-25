@@ -2,8 +2,8 @@ import { MenuItem } from '../models/menu-item';
 
 export const MENUITEMS: MenuItem[] = [
     { name: 'Batata', icon: 'fab fa-accessible-icon', childrenMenus: [
-        { name: 'Da terra', route: '#',  },
-        { name: 'Doce', route: '#',  }
+        { name: 'Da terra', route: 'daterra' },
+        { name: 'Doce', route: 'doce'  }
     ] },
     { name: 'Pizza', icon: 'account_circle', childrenMenus: [
         { name: 'Mozzarella', route: '#',  },

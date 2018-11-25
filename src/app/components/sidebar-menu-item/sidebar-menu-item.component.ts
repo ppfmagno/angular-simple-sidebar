@@ -8,6 +8,8 @@ import { MenuItem } from '../../models/menu-item';
 })
 export class SidebarMenuItemComponent implements OnInit {
   hasIcon: any = false;
+  isCurrentRoute: boolean;
+  currentRoute: string;
 
   constructor() { }
 
@@ -18,7 +20,7 @@ export class SidebarMenuItemComponent implements OnInit {
     this.hasIcon = this.menuItem.icon;
   }
 
-  toggleChildren(menuItem: MenuItem) {
+  toggleActive(menuItem: MenuItem) {
     menuItem.isActive = !menuItem.isActive;
     if (!menuItem.isActive && menuItem.childrenMenus) {
       for (const child of menuItem.childrenMenus) {

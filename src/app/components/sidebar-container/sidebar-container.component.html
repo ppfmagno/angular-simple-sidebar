@@ -1,2 +1,4 @@
 <ppm-sidebar [className]="sidebarState"></ppm-sidebar>
-<ppm-main-content [className]="sidebarState"></ppm-main-content>
+<ppm-main-content [className]="sidebarState">
+    <ng-content select="[ppmRootMain]" ppmRootMain></ng-content>
+</ppm-main-content>

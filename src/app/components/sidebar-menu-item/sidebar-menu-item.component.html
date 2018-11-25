@@ -5,19 +5,19 @@
 </ng-template>
 
 <ng-container *ngIf="menuItem.route; else noRoute">
-  <a href="{{ menuItem.route }}">
+  <a href="{{ menuItem.route }}" [class.current-route]="isCurrentRoute">
     <ng-container *ngTemplateOutlet="icon"></ng-container>
     {{ menuItem.name }}
   </a>
 </ng-container>
 
 <ng-template #noRoute>
-  <span (click)="toggleChildren(menuItem)">
+  <span (click)="toggleActive(menuItem)" [className]="menuItem.isActive? 'active-menu-item' : 'inactive-menu-item'">
     <ng-container *ngTemplateOutlet="icon"></ng-container>
     {{ menuItem.name }}
   </span>
 </ng-template>
 
 <ng-container *ngIf="menuItem.childrenMenus">
-  <ppm-sidebar-menu [menusFromParent]="menuItem.childrenMenus" [className]="menuItem.isActive? 'active' : 'inactive'"></ppm-sidebar-menu>
+  <ppm-sidebar-menu [menusFromParent]="menuItem.childrenMenus" [className]="menuItem.isActive? 'active-menu' : 'inactive-menu'"></ppm-sidebar-menu>
 </ng-container>
