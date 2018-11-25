@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { MenuItem } from '../../model/menu-item';
+import { MenuItem } from '../../models/menu-item';
 
 @Component({
   selector: 'ppm-sidebar-menu-item',
@@ -7,6 +7,7 @@ import { MenuItem } from '../../model/menu-item';
   styles: []
 })
 export class SidebarMenuItemComponent implements OnInit {
+  hasIcon: any = false;
 
   constructor() { }
 
@@ -14,6 +15,7 @@ export class SidebarMenuItemComponent implements OnInit {
 
   ngOnInit() {
     this.menuItem.isActive = false;
+    this.hasIcon = this.menuItem.icon;
   }
 
 }

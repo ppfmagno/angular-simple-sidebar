@@ -1,0 +1,7 @@
+<ng-container *ngIf="isFontAwesome; else materialFont">
+  <i [className]="icon"></i>
+</ng-container>
+
+<ng-template #materialFont>
+  <i class="material-icons">{{ icon }}</i>
+</ng-template>

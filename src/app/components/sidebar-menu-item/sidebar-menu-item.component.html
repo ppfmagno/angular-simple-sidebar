@@ -1,3 +1,7 @@
+<span class="menu-item-icon">
+  <ppm-menu-item-icon *ngIf="hasIcon" icon="{{ menuItem.icon }}"></ppm-menu-item-icon>
+</span>
+
 <ng-container *ngIf="menuItem.route; else noRoute">
   <a href="{{ menuItem.route }}">{{ menuItem.name }}</a>
 </ng-container>

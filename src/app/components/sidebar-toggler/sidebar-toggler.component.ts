@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { TogglerService } from '../../services/toggler.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { TogglerService } from '../../services/toggler.service';
   styles: []
 })
 export class SidebarTogglerComponent implements OnInit {
+  toggleBetweenDefault = 'open cozy';
+
+  @Input() toggleBetween: string;
 
   constructor(private togglerService: TogglerService) { }
 
@@ -15,7 +18,8 @@ export class SidebarTogglerComponent implements OnInit {
 
   @HostListener('click')
   toggle() {
-    this.togglerService.toggle();
+    const between = this.toggleBetween || this.toggleBetweenDefault;
+    this.togglerService.toggle(between);
   }
 
 }

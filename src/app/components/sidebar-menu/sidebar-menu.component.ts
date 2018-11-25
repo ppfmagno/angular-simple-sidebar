@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MenuItem } from '../../model/menu-item';
+import { MenuItem } from '../../models/menu-item';
 import { MENUITEMS } from '../../mock/mock-menu-items';
 
 @Component({
@@ -16,9 +16,6 @@ export class SidebarMenuComponent implements OnInit {
 
   ngOnInit() {
     this.menuItems = this.menusFromParent || MENUITEMS;
-    // this.menuItems.forEach(menuItem => {
-    //   menuItem.isActive = false;
-    // });
   }
 
 }
