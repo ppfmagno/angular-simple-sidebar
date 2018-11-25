@@ -5,7 +5,7 @@ import { MENUITEMS } from '../../mock/mock-menu-items';
 @Component({
   selector: 'ppm-sidebar-menu',
   templateUrl: './sidebar-menu.component.html',
-  styles: []
+  styleUrls: ['./sidebar-menu.component.scss']
 })
 export class SidebarMenuComponent implements OnInit {
   menuItems: MenuItem[]; // change later

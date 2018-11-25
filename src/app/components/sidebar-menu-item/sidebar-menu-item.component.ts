@@ -18,4 +18,13 @@ export class SidebarMenuItemComponent implements OnInit {
     this.hasIcon = this.menuItem.icon;
   }
 
+  toggleChildren(menuItem: MenuItem) {
+    menuItem.isActive = !menuItem.isActive;
+    if (!menuItem.isActive && menuItem.childrenMenus) {
+      for (const child of menuItem.childrenMenus) {
+        child.isActive = false;
+      }
+    }
+  }
+
 }

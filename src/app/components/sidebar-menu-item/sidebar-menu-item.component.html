@@ -1,17 +1,23 @@
-<span class="menu-item-icon">
-  <ppm-menu-item-icon *ngIf="hasIcon" icon="{{ menuItem.icon }}"></ppm-menu-item-icon>
-</span>
+<ng-template #icon>
+  <span class="menu-item-icon" *ngIf="hasIcon">
+    <ppm-menu-item-icon icon="{{ menuItem.icon }}"></ppm-menu-item-icon>
+  </span>
+</ng-template>
 
 <ng-container *ngIf="menuItem.route; else noRoute">
-  <a href="{{ menuItem.route }}">{{ menuItem.name }}</a>
+  <a href="{{ menuItem.route }}">
+    <ng-container *ngTemplateOutlet="icon"></ng-container>
+    {{ menuItem.name }}
+  </a>
 </ng-container>
 
 <ng-template #noRoute>
-  <span>
+  <span (click)="toggleChildren(menuItem)">
+    <ng-container *ngTemplateOutlet="icon"></ng-container>
     {{ menuItem.name }}
   </span>
 </ng-template>
 
 <ng-container *ngIf="menuItem.childrenMenus">
-  <ppm-sidebar-menu [menusFromParent]="menuItem.childrenMenus"></ppm-sidebar-menu>
+  <ppm-sidebar-menu [menusFromParent]="menuItem.childrenMenus" [className]="menuItem.isActive? 'active' : 'inactive'"></ppm-sidebar-menu>
 </ng-container>
