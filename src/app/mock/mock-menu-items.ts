@@ -15,5 +15,6 @@ export const MENUITEMS: MenuItem[] = [
             ] }
         ] }
     ] },
-    { name: 'Pudim', route: '#',  }
+    { name: 'Pudim', route: '#',  },
+    { name: 'lore frfwruihfriuherwiufhriuwhfu fr hfrwiuhfr iu irfiuhwfriu friuhiuhwiuferhiurehfuihwiuhfr iurewiuh friewufr i', route: '#' }
 ];

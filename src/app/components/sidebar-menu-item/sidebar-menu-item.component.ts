@@ -5,7 +5,7 @@ import { MenuItem } from '../../models/menu-item';
 @Component({
   selector: 'ppm-sidebar-menu-item',
   templateUrl: './sidebar-menu-item.component.html',
-  styles: []
+  styleUrls: ['./sidebar-menu-item.component.scss']
 })
 export class SidebarMenuItemComponent implements OnInit {
   hasIcon: any = false;

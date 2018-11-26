@@ -1,9 +1,15 @@
+$sidebar-width: 210px;
+
 :host {
     position: absolute;
-    width: 210px;
+    width: $sidebar-width;
     height: 100%;
     overflow: hidden;
 
     // delete below:
     background-color: tomato;
+}
+
+.sidebar-content {
+    width: $sidebar-width;
 }
