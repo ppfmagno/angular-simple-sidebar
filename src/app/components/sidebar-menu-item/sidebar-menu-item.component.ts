@@ -1,4 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from '../../models/menu-item';
 
 @Component({
@@ -11,7 +12,7 @@ export class SidebarMenuItemComponent implements OnInit {
   isCurrentRoute: boolean;
   currentRoute: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input() menuItem: MenuItem;
 

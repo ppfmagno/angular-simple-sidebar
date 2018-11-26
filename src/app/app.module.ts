@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Router, Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -10,8 +10,9 @@ import { TestOneComponent } from './test-one/test-one.component';
 import { TestTwoComponent } from './test-two/test-two.component';
 
 const routes: Routes = [
-  { path: 'daterra', component: TestOneComponent},
-  { path: 'doce', component: TestTwoComponent}
+  { path: 'daterra', component: TestOneComponent },
+  { path: 'doce', component: TestTwoComponent },
+  { path: '**', component: TestOneComponent }
 ];
 
 @NgModule({

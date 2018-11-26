@@ -5,7 +5,7 @@
 </ng-template>
 
 <ng-container *ngIf="menuItem.route; else noRoute">
-  <a href="{{ menuItem.route }}" [class.current-route]="isCurrentRoute">
+  <a routerLink="{{ menuItem.route }}" [class.current-route]="isCurrentRoute">
     <ng-container *ngTemplateOutlet="icon"></ng-container>
     {{ menuItem.name }}
   </a>
